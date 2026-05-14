@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Dulee, from Chanel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="site-shell">
+      <section class="hero panel active" id="intro" aria-labelledby="intro-title">
+        <div class="lily-mark" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="hero__content">
+          <p class="eyebrow">For Dulee, from Chanel</p>
+          <h1 id="intro-title">I made you a little journey.</h1>
+          <p class="lede">
+            Press start when you are ready. There are notes, photos, a message, and one
+            important question waiting at the end.
+          </p>
+          <button class="primary-action" id="start-button" type="button">
+            Start the journey
+          </button>
+        </div>
+      </section>
+
+      <section class="panel journey" id="journey" aria-labelledby="journey-title">
+        <div class="topbar">
+          <p class="eyebrow">Step <span id="step-number">1</span> of <span id="step-total">3</span></p>
+        </div>
+
+        <article class="step-card active" data-step="0">
+          <p class="eyebrow">Notes</p>
+          <h2 id="journey-title">Some people become your favorite chapter.</h2>
+          <p>
+            Dulee, this is a small walk through the things I want you to know, the pictures
+            I keep close, and the memories that made me sure about you.
+          </p>
+          <p>
+            I couldn't let February be our anniversary date, because that would mean we already missed our 1-month and 3-month anniversaries. So I decided to do this to ask you something important.
+          </p>
+          <p>
+            Since we started long distance from the beginning, even though that's what you said you wanted, I wanted to make this feel a little more meaningful. I decided to ask you this way because it's something I'm good at, and I thought it would be a nice way to show that I respect you and genuinely care about you.
+          </p>
+        </article>
+
+        <article class="step-card" data-step="1">
+          <p class="eyebrow">Pictures</p>
+          <h2>Twelve reasons to smile.</h2>
+          <p>
+            A little photo wall of us, because some memories deserve to be seen again.
+          </p>
+          <div class="photo-collage" aria-label="Photo collage">
+            <div class="collage-slot cslot-1"><img src="assets/photos/photo-01.jpg" alt="Chanel and Dulee memory 1" /></div>
+            <div class="collage-slot cslot-2"><img src="assets/photos/photo-02.jpg" alt="Chanel and Dulee memory 2" /></div>
+            <div class="collage-slot cslot-3"><img src="assets/photos/photo-03.jpg" alt="Chanel and Dulee memory 3" /></div>
+            <div class="collage-slot cslot-4"><img src="assets/photos/photo-04.jpg" alt="Chanel and Dulee memory 4" /></div>
+            <div class="collage-slot cslot-5"><img src="assets/photos/photo-05.jpg" alt="Chanel and Dulee memory 5" /></div>
+            <div class="collage-slot cslot-6"><img src="assets/photos/photo-06.jpg" alt="Chanel and Dulee memory 6" /></div>
+            <div class="collage-slot cslot-7"><img src="assets/photos/photo-07.jpg" alt="Chanel and Dulee memory 7" /></div>
+            <div class="collage-slot cslot-8"><img src="assets/photos/photo-08.jpg" alt="Chanel and Dulee memory 8" /></div>
+            <div class="collage-slot cslot-9"><img src="assets/photos/photo-09.jpg" alt="Chanel and Dulee memory 9" /></div>
+            <div class="collage-slot cslot-10"><img src="assets/photos/photo-10.jpg" alt="Chanel and Dulee memory 10" /></div>
+            <div class="collage-slot cslot-11"><img src="assets/photos/photo-11.jpg" alt="Chanel and Dulee memory 11" /></div>
+            <div class="collage-slot cslot-12"><img src="assets/photos/photo-12.jpg" alt="Chanel and Dulee memory 12" /></div>
+          </div>
+        </article>
+
+        <article class="step-card" data-step="2">
+          <p class="eyebrow">From Me</p>
+          <h2>A message only you should read.</h2>
+          <p class="personal-message">
+            I know I haven't always been the best at remembering things or say the smartest stuff sometimes, but somehow we've made it this far. And because of that, I wanted this to show you that I can make an effort and that I can keep my word.
+          </p>
+          <p class="personal-message">
+            If anyone had asked me before whether we'd end up where we are now, I honestly would've said there was no way I'd ever have a chance with you. The first time I saw you, I just thought you were so pretty.
+          </p>
+          <p class="personal-message">
+            I don't really know what else to say here since I'm not usually the type to write long messages like this, but I wanted you to know that this genuinely means a lot to me.
+          </p>
+        </article>
+
+        <div class="journey-controls">
+          <button class="secondary-action" id="back-button" type="button">Back</button>
+          <button class="primary-action" id="next-button" type="button">Next</button>
+        </div>
+      </section>
+
+      <section class="panel finale" id="finale" aria-labelledby="finale-title">
+        <div class="finale-card">
+          <div class="finale-copy">
+            <span class="ornament" aria-hidden="true">✦</span>
+            <p class="eyebrow">One Last Thing</p>
+            <h2 id="finale-title">Dulee, will you be my girlfriend?</h2>
+            <p>
+              I want the next chapter to be ours, officially. Pick carefully, because one
+              button is much more cooperative than the other.
+            </p>
+          </div>
+
+          <div class="answer-stage" id="answer-stage">
+            <button class="yes-button" id="yes-button" type="button">Yes, of course</button>
+            <button class="no-button" id="no-button" type="button">No</button>
+          </div>
+
+          <div class="yes-reveal" id="yes-reveal" aria-live="polite">
+            <span class="heart-particle" aria-hidden="true">♥</span>
+            <span class="heart-particle" aria-hidden="true">♥</span>
+            <span class="heart-particle" aria-hidden="true">♥</span>
+            <span class="heart-particle" aria-hidden="true">♥</span>
+            <span class="heart-particle" aria-hidden="true">♥</span>
+            <span class="heart-particle" aria-hidden="true">♥</span>
+            <p class="eyebrow">She Said Yes</p>
+            <h3>You just made Chanel the happiest person.</h3>
+            <p class="anniversary-note" id="anniversary-note"></p>
+            <p>One more thing: we need to plan our first official date.</p>
+            <button class="primary-action" id="plan-date-button" type="button">Plan the date</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel date-planner" id="date-planner" aria-labelledby="date-title">
+        <div class="planner-copy">
+          <p class="eyebrow">Date?</p>
+          <h2 id="date-title">Okay, girlfriend. Pick our plan.</h2>
+          <p>
+            Choose the date vibe and the cuisine. Chanel will handle the rest.
+          </p>
+        </div>
+
+        <div class="date-board" aria-label="Date planner">
+          <div class="date-question active" data-date-step="0">
+            <p class="eyebrow">Question 1</p>
+            <h3>What kind of date?</h3>
+            <div class="choice-grid">
+              <button class="choice-card" type="button" data-choice-type="date" data-choice="Car date">Car date</button>
+              <button class="choice-card" type="button" data-choice-type="date" data-choice="Dine-in date">Dine-in date</button>
+              <button class="choice-card" type="button" data-choice-type="date" data-choice="Movie night">Movie night</button>
+              <button class="choice-card" type="button" data-choice-type="date" data-choice="McDonald's date">McDonald's date</button>
+            </div>
+          </div>
+
+          <div class="date-question" data-date-step="1">
+            <p class="eyebrow">Question 2</p>
+            <h3>What cuisine?</h3>
+            <div class="choice-grid">
+              <button class="choice-card" type="button" data-choice-type="cuisine" data-choice="Italian">Italian</button>
+              <button class="choice-card" type="button" data-choice-type="cuisine" data-choice="Korean">Korean</button>
+              <button class="choice-card" type="button" data-choice-type="cuisine" data-choice="Indian">Indian</button>
+              <button class="choice-card" type="button" data-choice-type="cuisine" data-choice="Fast food">Fast food</button>
+            </div>
+          </div>
+
+          <div class="date-summary" id="date-summary" aria-live="polite">
+            <p class="eyebrow">Official Plan</p>
+            <h3 id="summary-title">Our first date is loading...</h3>
+            <p id="summary-text"></p>
+            <div class="result-actions">
+              <button class="secondary-action" id="copy-result-button" type="button">Copy result</button>
+              <button class="secondary-action" id="restart-date-button" type="button">Pick again</button>
+            </div>
+            <p class="result-note" id="result-note"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="spotify-player">
+      <iframe
+        src="https://open.spotify.com/embed/track/7Ewz6bJ97vUqk5HdkvguFQ?utm_source=generator&theme=0"
+        width="100%"
+        height="80"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <img class="lightbox__img" id="lightbox-img" src="" alt="" />
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
