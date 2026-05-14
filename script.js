@@ -3,6 +3,7 @@ const panels = {
   journey: document.querySelector("#journey"),
   finale: document.querySelector("#finale"),
   datePlanner: document.querySelector("#date-planner"),
+  endScreen: document.querySelector("#end-screen"),
 };
 
 const startButton = document.querySelector("#start-button");
@@ -21,6 +22,7 @@ const dateQuestions = [...document.querySelectorAll(".date-question")];
 const dateSummary = document.querySelector("#date-summary");
 const summaryTitle = document.querySelector("#summary-title");
 const summaryText = document.querySelector("#summary-text");
+const endButton = document.querySelector("#end-button");
 const copyResultButton = document.querySelector("#copy-result-button");
 const restartDateButton = document.querySelector("#restart-date-button");
 const resultNote = document.querySelector("#result-note");
@@ -201,6 +203,10 @@ restartDateButton.addEventListener("click", () => {
   });
   resultNote.textContent = "";
   renderDateStep();
+});
+
+endButton.addEventListener("click", () => {
+  showPanel("endScreen");
 });
 
 copyResultButton.addEventListener("click", () => {
