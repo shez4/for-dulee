@@ -14,7 +14,28 @@
   </head>
   <body>
     <main class="site-shell">
-      <section class="hero panel active" id="intro" aria-labelledby="intro-title">
+      <section class="panel lock-screen active" id="lock-screen" aria-labelledby="lock-title">
+        <div class="lock-card">
+          <span class="lock-ornament" aria-hidden="true">✦</span>
+          <p class="eyebrow">For Dulee, from Chanel</p>
+          <h2 id="lock-title">This is just for you.</h2>
+          <p class="lock-lede">Enter the password to continue.</p>
+          <div class="lock-form">
+            <input
+              class="lock-input"
+              id="lock-input"
+              type="password"
+              placeholder="Password"
+              autocomplete="current-password"
+              aria-label="Password"
+            />
+            <button class="primary-action lock-submit" id="lock-submit" type="button">Unlock →</button>
+          </div>
+          <p class="lock-error" id="lock-error" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="hero panel" id="intro" aria-labelledby="intro-title">
         <div class="lily-mark" aria-hidden="true">
           <span></span><span></span><span></span>
         </div>

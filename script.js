@@ -1,4 +1,5 @@
 const panels = {
+  lockScreen: document.querySelector("#lock-screen"),
   intro: document.querySelector("#intro"),
   journey: document.querySelector("#journey"),
   finale: document.querySelector("#finale"),
@@ -58,6 +59,39 @@ function showPanel(panelName) {
   Object.values(panels).forEach((panel) => panel.classList.remove("active"));
   panels[panelName].classList.add("active");
 }
+
+const PASS_HASH = "a772c53d4c37cc18a687078f97ba62e59e64e0550805b6c27c8c09e3f5afabcf";
+
+async function hashInput(input) {
+  const encoded = new TextEncoder().encode(input);
+  const buffer = await crypto.subtle.digest("SHA-256", encoded);
+  return Array.from(new Uint8Array(buffer))
+    .map((b) => b.toString(16).padStart(2, "0"))
+    .join("");
+}
+
+async function attemptUnlock() {
+  const input = document.querySelector("#lock-input").value;
+  const hash = await hashInput(input);
+  if (hash === PASS_HASH) {
+    sessionStorage.setItem("unlocked", "1");
+    showPanel("intro");
+  } else {
+    document.querySelector("#lock-error").textContent = "Wrong password. Try again.";
+    document.querySelector("#lock-input").value = "";
+    document.querySelector("#lock-input").focus();
+  }
+}
+
+if (sessionStorage.getItem("unlocked") === "1") {
+  showPanel("intro");
+}
+
+document.querySelector("#lock-submit").addEventListener("click", attemptUnlock);
+document.querySelector("#lock-input").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") attemptUnlock();
+  document.querySelector("#lock-error").textContent = "";
+});
 
 function renderStep() {
   steps.forEach((step, index) => step.classList.toggle("active", index === currentStep));
