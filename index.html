@@ -202,6 +202,76 @@
           <p class="end-signature">— Chanel</p>
         </div>
       </section>
+
+      <section class="panel games" id="games" aria-labelledby="games-title">
+        <div class="games-header">
+          <p class="eyebrow">Mini Games</p>
+          <h2 id="games-title">Play a little.</h2>
+        </div>
+
+        <div class="game-tabs" role="tablist">
+          <button class="game-tab active" type="button" data-game="snake">Snake</button>
+          <button class="game-tab" type="button" data-game="memory">Memory</button>
+          <button class="game-tab" type="button" data-game="breakout">Breakout</button>
+        </div>
+
+        <div class="game-section" id="game-snake">
+          <div class="snake-wrap">
+            <div class="snake-hud">
+              <span class="hud-label">Score</span>
+              <span class="hud-value" id="snake-score">0</span>
+              <span class="hud-label">Best</span>
+              <span class="hud-value" id="snake-best">0</span>
+            </div>
+            <div class="snake-stage">
+              <canvas class="snake-canvas" id="snake-canvas"></canvas>
+              <div class="snake-overlay visible" id="snake-overlay">
+                <p class="snake-title">Snake</p>
+                <p class="snake-sub" id="snake-sub">Arrow keys or swipe to play.</p>
+                <button class="primary-action" id="snake-start" type="button">Start</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-section" id="game-memory" hidden>
+          <div class="snake-wrap">
+            <div class="snake-hud">
+              <span class="hud-label">Moves</span>
+              <span class="hud-value" id="memory-moves">0</span>
+              <span class="hud-label">Pairs</span>
+              <span class="hud-value" id="memory-pairs">0 / 8</span>
+            </div>
+            <div class="memory-stage">
+              <div class="memory-grid" id="memory-grid"></div>
+              <div class="snake-overlay visible" id="memory-overlay">
+                <p class="snake-title">Memory</p>
+                <p class="snake-sub" id="memory-sub">Match all 8 pairs.</p>
+                <button class="primary-action" id="memory-start" type="button">Play</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-section" id="game-breakout" hidden>
+          <div class="snake-wrap">
+            <div class="snake-hud">
+              <span class="hud-label">Score</span>
+              <span class="hud-value" id="breakout-score">0</span>
+              <span class="hud-label">Lives</span>
+              <span class="hud-value" id="breakout-lives">3</span>
+            </div>
+            <div class="snake-stage">
+              <canvas class="snake-canvas" id="breakout-canvas"></canvas>
+              <div class="snake-overlay visible" id="breakout-overlay">
+                <p class="snake-title">Breakout</p>
+                <p class="snake-sub" id="breakout-sub">Move mouse or drag to control the paddle.</p>
+                <button class="primary-action" id="breakout-start" type="button">Play</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <div class="spotify-player">
@@ -218,6 +288,21 @@
     <div class="lightbox" id="lightbox" aria-hidden="true">
       <img class="lightbox__img" id="lightbox-img" src="" alt="" />
     </div>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" hidden>
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-hidden="true">
+      <button class="nav-close" id="nav-close" aria-label="Close menu" type="button">✕</button>
+      <p class="eyebrow nav-eyebrow">Navigate</p>
+      <ul class="nav-list">
+        <li><button class="nav-item" type="button" data-panel="intro">Home</button></li>
+        <li><button class="nav-item" type="button" data-panel="journey">The Journey</button></li>
+        <li><button class="nav-item" type="button" data-panel="games">Mini Games</button></li>
+      </ul>
+    </nav>
+    <div class="nav-backdrop" id="nav-backdrop"></div>
 
     <script src="script.js"></script>
   </body>
